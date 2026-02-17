@@ -4,12 +4,11 @@ def darBienvenida():
    #  Imprime el mensaje de bienvenida del programa.
     
     print("""
-    ¡Bienvenido al Generador de Números Raros!
+    ¡Bienvenido al Generador de números raros!
     Este programa creará un número aleatorio donde
     todos sus dígitos serán completamente distintos.
     """
     )
-    print("=" * 50)
 
 class Usuario:
     @staticmethod
