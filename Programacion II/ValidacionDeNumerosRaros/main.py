@@ -11,6 +11,6 @@ num.pedirValor()
 # validar numero
 print(" Numero valido?", num.validarValor())
 
-while (not val):
-   num.pedirValor()
-   val = num.validarValor()
+# while (not val):
+#    num.pedirValor()
+#    val = num.validarValor()
