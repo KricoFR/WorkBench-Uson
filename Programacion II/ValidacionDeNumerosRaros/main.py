@@ -9,7 +9,9 @@ num.pedirLongitud()
 # pedir objeto
 num.pedirValor()
 # validar numero
-print(" Numero valido?", num.validarValor())
+print("Inicia con cero?", num.validarValor())
+
+num.val()
 
 # while (not val):
 #    num.pedirValor()
