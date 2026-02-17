@@ -1,0 +1,18 @@
+Primer programa de python hay que hacer una menu para ofrecer al usuario las siguientes opciones
+Pedir el nombre del usuario antes de empezar el programa
+Hola "_User_" 
+"A)" Generar una letra al azar
+"2)" Generar un numero real al azar
+"S)" 3 salir
+    Regresa el dato solicitado: "__"
+        Regresar al menu ver. 2
+Hola "_User_" que deseas hacer ahora?
+"A)" Generar una letra al azar
+"2)" Generar un numero real al azar
+"S)" 3 salir
+    Regresar el dato solicitado: "__"
+        Regresar al menu ver. 2
+Al salir hacer una despedida
+Gracias "_User_" por utilizar mi programa, hecho por: "Kristopher"
+Añadir documentacion al inicio del programa en forma de comentarios.
+hacer solo 3 intentos antes de cerrar el programa
