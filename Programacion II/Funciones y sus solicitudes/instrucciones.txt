@@ -1,0 +1,3 @@
+hacer un programa para hacer combinaciones de dados generados por la maquina
+tener dos programas en funciones y hacer que de manera recursiva se llamen a si mismos
+
