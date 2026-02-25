@@ -1,0 +1,11 @@
+crear una lista al azar para reordenarla con fuciones recursivas
+lista = [auto1, auto2, auto3, auto4]
+
+tomar el objeto mas grande y ponerlo al final
+   Ejemplo:
+      cambiar el auto1 por el auto2
+      lista = [auto1, auto2, auto3, auto4]
+   Resultado:
+      lista = [auto2, auto1, auto3, auto4]
+
+
