@@ -1,78 +1,54 @@
-# atributos
-# marca
-# Modelo
-# anio
+class Auto:
+    def __init__(self):
+        # Lista que guardará diccionarios de autos
+        self.catalogo = []
 
-from diccionario import catalogo
+    def menu1(self):
+        while True:
+            # Llamamos a la bienvenida dentro del bucle para que el usuario sepa qué hacer
+            print("\nMenu Principal")
+            print("[1] Adjuntar un nuevo vehículo")
+            print("[2] Ver catálogo")
+            print("[3] Salir")
+            
+            try:
+                opcion = int(input("Seleccione una opción: "))
+            except ValueError:
+                print("Por favor, ingrese un número válido.")
+                continue
+
+            if opcion == 1:
+                self.agregar_vehiculo()
+            elif opcion == 2:
+                self.mostrar_catalogo()
+            elif opcion == 3:
+                print("Saliendo...")
+                break
+            else:
+                print("Opción no válida.")
+
+    def agregar_vehiculo(self):
+        print("\nAgregar nuevo Vehiculo")
+        marca = input("Ingrese la marca: ")
+        modelo = input("Ingrese el modelo: ")
+        anio = input("Ingrese el año: ")
+        
+        # Guardamos el auto como un objeto (diccionario) completo
+        nuevo_auto = {
+            "marca": marca,
+            "modelo": modelo,
+            "anio": anio
+        }
+        self.catalogo.append(nuevo_auto)
+        print("¡Vehículo agregado con éxito!")
+
+    def mostrar_catalogo(self):
+        print("\nAccediendo al catalogo de Vehiculos...")
+        if not self.catalogo:
+            print("El catálogo está vacío.")
+        else:
+            for i, auto in enumerate(self.catalogo, 1):
+                print(f"{i}. Marca: {auto['marca']} | Modelo: {auto['modelo']} | Año: {auto['anio']}")
 
 def darBienvenida():
-   print("""Hola nuevo usuario nos vemos de nuevo
-entonces que quieres hacer?
-[1] Adjuntar un nuevo veiculo
-[2] Cambiar un vehiculo
-[3] Solicitar un dato
-[4] Salir
-""")
-
-class Auto:
-   def __init__(self):
-      self.catalogo = []
-
-   def menu1(self,valor):
-      while True:
-         valor = int(input())
-         match valor:
-            case 1:  # Enseniar el nuevo menu para adjuntar un vehiculo
-               self.menu2()
-            case 2:  # Cambiar los datos de algun vehiculo ya existente, o acudir a las funcinones si no existe
-               print("Elige el modelo a continuacion")
-               for clave in self.catalogo():
-                  print(list(self.catalogo))
-               key = input()
-               if key in self.catalogo():
-                  nuevoValor = input("Ahora añade el nuevo modelo")
-                  if nuevoValor == '':
-                     print("No hay datos para cambiar desea añadir?")
-               else:
-                  self.catalogo.append({key: nuevoValor})
-               #    try:
-               #       self.catalogo[None]
-               #    except :
-               #       print("No hay datos para cambiar desea añadir?")
-               #    except ValueError:
-               #       print("No hay datos para cambiar deseas añadir?")
-               
-            case 3:  # Solicitar un dato dentro del diccionario
-               pass
-            case 4:  # Salir del menu
-               print("Saliendo...")
-               break
-      darBienvenida()
-
-   def menu2(self):
-      print("""Elije que parametro deseas cambiar?
-[1] Añadir marca
-[2] Añadir modelo
-[3] Añadir año
-"""
-)
-      j = int(input())
-      match j:
-         case 1:
-            self.marca()
-         case 2:
-            self.modelo()
-         case 3:
-            self.anio()
-
-   def modelo(self):
-      modelo = input("Ingrese el modelo: ")
-      self.catalogo.append({"modelo": modelo})
-
-   def marca(self):
-      marca = input("Ingrese la marca: ")
-      self.catalogo.append({"marca": marca})
-
-   def anio(self):
-      anio = input("Ingrese el año: ")
-      self.catalogo.append({"anio": anio})
+    print("Hola, bienvenido al sistema de gestión de vehículos.")
