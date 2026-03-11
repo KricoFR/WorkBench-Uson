@@ -48,13 +48,6 @@ class Figura:
         """
         pass
 #TODO: Hay que desarrollar la funcion para determinar si es un rectangulo
-    def es_Rectangulo(self):
-        """Los paralelogramos entran en los rectangulos, los cuadrados tienen
-        sus cuatros lados iguales y sus angulos internos de 90^o
-        Los rectangulos tienen dos pares de lados iguales entre si con sus
-        angulos internos de 90^o
-        """
-        pass
 
 def darBienvenida():
     print("""
