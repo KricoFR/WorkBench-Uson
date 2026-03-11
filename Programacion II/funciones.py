@@ -31,7 +31,7 @@ class Figura:
         """))
         while
         if opcion = "":
-            print
+            print("Debes ingresar entradas válidas vuelve a intentarlo")
             match opcion:
                 case
 
