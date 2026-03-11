@@ -42,12 +42,19 @@ class Figura:
 
 #TODO: hay que desarrollar la funcion para determinar si es un trapecio
     def esUnTrapecio(self):
+        m1 = ((c[y])-(b[y]))((c[x])-(b[x])
+        m2 = ((d[y])-(a[y]))/((d[x])-(a[x]))
+        
+        if m1 = m2:
+            print(f'pendientes iguales la pendiente CB = {m1}, y la pendiente DA = {m2}' )
+        
+            
         """aunque es un paralelogramo la caracteristica principal es que tiene 
         dos lados iguales y la suma de todos sus angulos internos son 360^o
 
         """
         pass
-#TODO: Hay que desarrollar la funcion para determinar si es un rectangulo
+
 
 def darBienvenida():
     print("""
