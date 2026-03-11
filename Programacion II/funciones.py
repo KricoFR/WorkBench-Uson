@@ -1,0 +1,68 @@
+# Aca se van a generar las funciones para el main AKA NuevoProyecto
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+import random
+
+class Figura:
+    def __init__(self, a, b, c, d):
+        #TODO: hacer un while para generar los puntos de 'x' y 'y' en los 4 cuadrantes para evitar que se interpongan y se pueda hacer un cuadrilatero 
+        x = random.randint(0,10)
+        y = random.randint(0,10)
+        a = [x,y]
+        x = random.randint(-10, 0)
+        y = random.randint(0, 10)
+        b = [x,y]
+        x = random.randint(-10,0)
+        y = random.randint(-10,0)
+        c = [x,y]
+        x = random.randint(0,10)
+        y = random.randint(-10,0)
+#TODO: Aca es el apartado para poner las funciones determinantes donde validemos que son principalmente 4 puntos obtenidos o generados para el desarrollo de la funcion
+    def clasificar_figura(self,valor):
+        opcion = int(input("""Elige la opcion que desees:
+        [1] Generar los valores del cuadrilatero
+        [2] Salir
+
+        """))
+        while
+        if opcion = "":
+            print
+            match opcion:
+                case
+
+        if prueba (self.puntos):
+            return True
+        return False
+        
+
+#TODO: hay que desarrollar la funcion para determinar si es un trapecio
+    def esUnTrapecio(self):
+        """aunque es un paralelogramo la caracteristica principal es que tiene 
+        dos lados iguales y la suma de todos sus angulos internos son 360^o
+
+        """
+        pass
+#TODO: Hay que desarrollar la funcion para determinar si es un rectangulo
+    def es_Rectangulo(self):
+        """Los paralelogramos entran en los rectangulos, los cuadrados tienen
+        sus cuatros lados iguales y sus angulos internos de 90^o
+        Los rectangulos tienen dos pares de lados iguales entre si con sus
+        angulos internos de 90^o
+        """
+        pass
+
+def darBienvenida():
+    print("""
+    Bienvenido nuevo usuario hoy vamos a desarrollar
+    un programa para determinar si los puntos que 
+    proporcionas, o los que genera la maquina son que 
+    tipo de figura
+    """
+          )
+
+
