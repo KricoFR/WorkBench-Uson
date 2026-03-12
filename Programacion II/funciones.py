@@ -1,11 +1,5 @@
 # Aca se van a generar las funciones para el main AKA NuevoProyecto
 # 
-# 
-# 
-# 
-# 
-# 
-# 
 import random, math
 
 class Figura:
@@ -33,6 +27,15 @@ class Figura:
             self.puntos.append((x, y))
             
         return self.puntos
+
+    def pendiente(self, p1, p2):
+        
+        dx = p2[0] - p1[0]
+        dy = p2[1] - p1[1]
+        if dx == 0:
+            return float('inf')
+        return dy / dx
+
 #TODO: Aca es el apartado para poner las funciones determinantes donde validemos 
 #que son principalmente 4 puntos obtenidos o generados para el desarrollo de la funcion
     def clasificar_figura(self,valor):
@@ -55,70 +58,81 @@ class Figura:
 
 #TODO: hay que desarrollar la funcion para determinar si es un trapecio
     def esUnTrapecio(self):
-        m1 = ((c[y])-(b[y]))((c[x])-(b[x]))
-        m2 = ((d[y])-(a[y]))/((d[x])-(a[x]))
+        # aunque es un paralelogramo la caracteristica principal es que tiene 
+        # dos lados iguales y la suma de todos sus angulos internos son 360^o
+# Asumiendo que self.puntos tiene [A, B, C, D]
+        p = self.puntos
         
-        if m1 == m2:
-            print(f'pendientes iguales la pendiente CB = {m1}, y la pendiente DA = {m2}' )
+        m_AB = self.pendiente(p[0], p[1])
+        m_BC = self.pendiente(p[1], p[2])
+        m_CD = self.pendiente(p[2], p[3])
+        m_DA = self.pendiente(p[3], p[0])
         
+        # Un trapecio tiene al menos un par de lados opuestos paralelos
+        # Lados opuestos: AB y CD / BC y DA
+        paralelo1 = math.isclose(m_AB, m_CD)
+        paralelo2 = math.isclose(m_BC, m_DA)
+        
+        return paralelo1 or paralelo2
+        
+
+
+#TODO:===================Importar la funcion de el Eric (Primo)=========================
+   
+    def es_rombo(self):          
+# Cambie el 'a, b, c, d' por 'self' para su utilizacion xd
+        a, b, c, d = self.puntos 
+# Adicion para adaptar el codigo a la clase
+        lados=False
+        rombo=False              
+# En esta linea 'Rombo' se cambio por 'rombo'
+        # """Un rombo es:
+        # un cuadrilatero paralelogramo con
+        # cuatro lados iguales
+        # angulos opuestos iguales #osea laterales iguales y arriba abajo tmbn
+        # cada punto tiene X y Y, OBVIAMENTE
+        # ABCD son listas, obvio
+        # calcular distancia para saber los lados, supongo
+        # formula distancia:
+        # mats.sqrt(x2-x1^2 + y2-y1^2)"""
+        d1=math.sqrt(((b[0]-a[0])**2)+((b[1]-a[1])**2))
+        d2=math.sqrt(((c[0]-b[0])**2)+((c[1]-b[1])**2))
+        d3=math.sqrt(((d[0]-c[0])**2)+((d[1]-c[1])**2))
+        d4=math.sqrt(((a[0]-d[0])**2)+((a[1]-d[1])**2))
+        if d1==d2 and d2==d3 and d3==d4 and d4==d1:
+            lados=True#que los lados sean iguales pue
+        if lados==True:
+            #como los lados son iguales, ahora checar que los angulos opuestos sean iguales
+            #formula m (pendiente)=y2-y1/x2-x1
+            #con formula= grados=tan((m2-m1)/(1+m2*m1))
+            #pendientes
+            m1=(b[1]-a[1])/(b[0]-a[0])        
+            m2=(c[1]-b[1])/(c[0]-b[0])        
+            m3=(d[1]-c[1])/(d[0]-c[0])        
+            m4=(a[1]-d[1])/(a[0]-d[0])
+            #grados
+            g1=math.atan(abs((m2-m1)/(1+m2*m1)))
+            g2=math.atan(abs((m3-m2)/(1+m3*m2)))
+            g3=math.atan(abs((m4-m3)/(1+m4*m3)))
+            g4=math.atan(abs((m1-m4)/(1+m1*m4)))
+            g1 = round(g1, 10)
+            g2 = round(g2, 10)
+            g3 = round(g3, 10)
+            g4 = round(g4, 10)
             
-        """aunque es un paralelogramo la caracteristica principal es que tiene 
-        dos lados iguales y la suma de todos sus angulos internos son 360^o
-
-        """
-        pass
-
-#TODO: Importar la funcion de el Eric (Primo)
-def es_rombo(a,b,c,d):
-    lados=False
-    Rombo=False
-    # Un rombo es:
-    # un cuadrilatero paralelogramo con
-    # cuatro lados iguales
-    # angulos opuestos iguales #osea laterales iguales y arriba abajo tmbn
-    # cada punto tiene X y Y, OBVIAMENTE
-    # ABCD son listas, obvio
-    # calcular distancia para saber los lados, supongo
-    # formula distancia:
-    # mats.sqrt(x2-x1^2 + y2-y1^2)
-    d1=math.sqrt(((b[0]-a[0])**2)+((b[1]-a[1])**2))
-    d2=math.sqrt(((c[0]-b[0])**2)+((c[1]-b[1])**2))
-    d3=math.sqrt(((d[0]-c[0])**2)+((d[1]-c[1])**2))
-    d4=math.sqrt(((a[0]-d[0])**2)+((a[1]-d[1])**2))
-    if d1==d2 and d2==d3 and d3==d4 and d4==d1:
-        lados=True#que los lados sean iguales pue
-    if lados==True:
-        #como los lados son iguales, ahora checar que los angulos opuestos sean iguales
-        #formula m (pendiente)=y2-y1/x2-x1
-        #con formula= grados=tan((m2-m1)/(1+m2*m1))
-        #pendientes
-        m1=(b[1]-a[1])/(b[0]-a[0])        
-        m2=(c[1]-b[1])/(c[0]-b[0])        
-        m3=(d[1]-c[1])/(d[0]-c[0])        
-        m4=(a[1]-d[1])/(a[0]-d[0])
-        #grados
-        g1=math.atan(abs((m2-m1)/(1+m2*m1)))
-        g2=math.atan(abs((m3-m2)/(1+m3*m2)))
-        g3=math.atan(abs((m4-m3)/(1+m4*m3)))
-        g4=math.atan(abs((m1-m4)/(1+m1*m4)))
-        g1 = round(g1, 10)
-        g2 = round(g2, 10)
-        g3 = round(g3, 10)
-        g4 = round(g4, 10)
-        
-        if g1==g3 and g2==g4:
-            rombo=True
-    else:
-        rombo=False
-    return rombo
+            if g1==g3 and g2==g4:
+                rombo=True
+        else:
+            rombo=False
+        return rombo
 
 def darBienvenida():
     print("""
-    Bienvenido nuevo usuario hoy vamos a desarrollar
-    un programa para determinar si los puntos que 
-    proporcionas, o los que genera la maquina son que 
-    tipo de figura
-    """
-          )
+Bienvenido [USER] hoy vamos a probar nuestro 
+programa hecho por el equipo mas perron para 
+determinar si los puntos que genera la maquina 
+son algun tipo de figura y de que tipo es?
+"""
+)
 
 
