@@ -25,8 +25,3 @@ def ejecutar_clasificador():
 if __name__ == "__main__":
     ejecutar_clasificador()
 
-# from funciones import Figura, darBienvenida
-
-# bienvenida = darBienvenida()
-
-# print(bienvenida)
