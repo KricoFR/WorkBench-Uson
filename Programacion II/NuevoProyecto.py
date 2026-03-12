@@ -4,19 +4,29 @@
 # crear una funcion de prueba
 #
 #
-from funciones import Figura, darBienvenida
+from funciones import Figura
 
-bienvenida = darBienvenida()
+def ejecutar_clasificador():
+    print("--- Clasificador de Cuadriláteros ---")
+    
+    # Instanciar la clase
+    mi_figura = Figura()
+    
+    # Obtener y mostrar puntos
+    puntos = mi_figura.obtener_coordenadas()
+    print(f"\nPuntos generados (ordenados):")
+    for i, p in enumerate(puntos):
+        print(f" Punto {i+1}: {p}")
+    
+    # Clasificar
+    resultado = mi_figura.clasificar_figura()
+    print(f"\nResultado de la clasificación: {resultado}")
 
-print(bienvenida)
+if __name__ == "__main__":
+    ejecutar_clasificador()
 
+# from funciones import Figura, darBienvenida
 
+# bienvenida = darBienvenida()
 
-
-
-
-
-
-
-
-
+# print(bienvenida)
