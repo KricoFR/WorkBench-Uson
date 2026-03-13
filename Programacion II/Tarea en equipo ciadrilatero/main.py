@@ -37,7 +37,7 @@ def ejecutar_clasificador():
         print(f"Excelente, La figura es un: {resultado_zoe}")
         
     if not es_trapecio and not es_rombo and not resultado_zoe:
-        print("- No se pudo determinar un tipo de figura específico con los métodos actuales.")
+        print("Excelente, La figura es un: cuadrilatero!.")
 
 # uso esto pata evitar utilizacion de codigo innecesario :P
 if __name__ == "__main__":
