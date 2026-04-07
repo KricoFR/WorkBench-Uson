@@ -5,6 +5,8 @@ class GreatSword:
       espada.elemento
       espada.afinidad
       espada.nombre
+      
+
    def saludos(self):
       print(f"""Bienvenido a mi programa
             Con este programa tendras el
@@ -22,3 +24,4 @@ class GreatSword:
             Ahora ingresa el elemento
             {self.elemento}
             """)  
+
