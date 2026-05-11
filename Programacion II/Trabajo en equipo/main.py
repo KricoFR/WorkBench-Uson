@@ -33,3 +33,15 @@ Requisitos:
 	 if, for, while, len, print
 
 """
+import random
+def agregar:
+	pass
+def eliminar:
+	pass
+def modificar:
+	pass
+#TODO: Terminar las funciones pertinentes
+alumnos=['Ana', 'Carlos', 'JoseMaria', 'MariaJose', 'Luisa']
+#TODO: Elaborar el main
+
+
