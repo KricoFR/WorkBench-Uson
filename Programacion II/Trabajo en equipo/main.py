@@ -1,8 +1,8 @@
-# Realizar un programa para demostrar el manejo de listas en python 
-# Insertar el nuevo estudiante
-# Eliminar estudiante existente
-# Modificar algun estudiante
 """
+Realizar un programa para demostrar el manejo de listas en python 
+Insertar el nuevo estudiante
+Eliminar estudiante existente
+ Modificar algun estudiante
 Requisitos:
 =la seleccion de la accion debera realizarse de forma aleatoria
 =Este proceso debe repetirse 9 veces
@@ -34,11 +34,11 @@ Requisitos:
 
 """
 import random
-def agregar:
+def agregar():
 	pass
-def eliminar:
+def eliminar():
 	pass
-def modificar:
+def modificar():
 	pass
 #TODO: Terminar las funciones pertinentes
 alumnos=['Ana', 'Carlos', 'JoseMaria', 'MariaJose', 'Luisa']
