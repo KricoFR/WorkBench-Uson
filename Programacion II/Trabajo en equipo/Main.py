@@ -1,3 +1,9 @@
+"""
+Alumnos Responsables:
+219210970 Cordova Morales Kristopher Sebastian
+
+
+"""
 import random
 
 def mostrar_lista(estudiantes): #Muestra el estado actual de la lista de estudiantes.
