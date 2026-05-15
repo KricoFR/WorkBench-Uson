@@ -1,0 +1,56 @@
+"""
+Instructions
+
+En un centro escolar se registran las calificaciones parciales de estudiantes en distintas actividades.
+
+Cada estudiante tiene una lista de calificaciones decimales (tipo float) correspondientes a prácticas, tareas y exámenes rápidos.
+
+El objetivo es desarrollar un programa que:
+
+    Lea datos desde un archivo.
+    Utilice iteradores para recorrer información.
+    Procese datos flotantes.
+    Genere reportes en nuevos archivos.
+
+El archivo calificaciones.txt contiene una lista de estudiantes y sus calificaciones. Donde cada línea contiene: Nombre,calificacion1,calificacion2,calificacion3
+
+
+El programa deberá:
+
+    Leer el archivo calificaciones.txt.
+    Utilizar iteradores para recorrer los datos.
+    Calcular:
+        Promedio por estudiante.
+        Promedio general del grupo. 
+    Guardar un reporte en un archivo llamado reporte.txt.
+    Mostrar estadísticas en pantalla.
+
+
+Para cada estudiante:
+
+    Convertir las calificaciones a tipo float.
+    Calcular el promedio.
+    Determinar si el estudiante:
+        Aprueba (promedio >= 70)
+        Reprueba (promedio < 70)
+
+
+Generar un archivo llamado reporte.txt con el siguiente formato:
+
+REPORTE DE CALIFICACIONES
+
+1. Ana -> Promedio: 88.07 -> APROBADO
+2. Luis -> Promedio: 71.90 -> APROBADO
+3. Maria -> Promedio: 97.83 -> APROBADO
+4. Carlos -> Promedio: 67.00 -> REPROBADO
+Promedio general del grupo: 81.20
+
+En general, se debe validar lo siguiente:
+
+    Utilizar listas.
+    Utilizar ciclos.
+    Utilizar funciones.
+    Manejar archivos de texto.
+    Usar datos tipo float.
+    Implementar iteradores correctamente.
+    Validar posibles errores de archivo usando try-except"""
